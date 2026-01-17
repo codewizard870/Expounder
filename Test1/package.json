@@ -1,0 +1,19 @@
+{
+  "name": "alpha-token-deployment",
+  "version": "1.0.0",
+  "description": "Deploy Alpha token with 5% transfer tax on Solana testnet",
+  "main": "deploy.ts",
+  "scripts": {
+    "deploy": "ts-node deploy.ts",
+    "test-transfer": "ts-node test-transfer.ts"
+  },
+  "dependencies": {
+    "@solana/web3.js": "^1.87.6",
+    "@solana/spl-token": "^0.4.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  }
+}
