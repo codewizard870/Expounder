@@ -11,9 +11,10 @@ This project deploys the **Alpha** token on Solana testnet with the following sp
 
 ## Technical Details
 
-- **Token Program**: SPL Token-2022 (Token Extensions Program)
+- **Token Program**: 3yHtQdhbuuA6xhfUZ5qXHnHH6PJQktpMPAMfLxC6HZPJ
 - **Extension Used**: Transfer Fee Config
 - **Tax Mechanism**: Built-in transfer fee (5% = 500 basis points)
+- **Tax Collector**: CPkBLKtV7Nqaeaqj9tu6vEBF4NXuLhuzwgSF9spXQMo2
 - **Decimals**: 9
 - **Network**: Solana Testnet
 
@@ -106,7 +107,7 @@ Example output:
 ========================
 Token Name: Alpha
 Ticker: ALPHA
-Mint Address: 7xKXtg2CW87d97TXJSDpbD5jBkheTqA83TZRuJosgAsU
+Mint Address: 3yHtQdhbuuA6xhfUZ5qXHnHH6PJQktpMPAMfLxC6HZPJ
 Total Supply: 1,000,000 tokens
 Transfer Tax: 5% (500 basis points)
 Token Program: Token-2022 (Token Extensions)

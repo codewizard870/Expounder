@@ -25,7 +25,7 @@ async function testTransfer() {
   const connection = new Connection('https://api.testnet.solana.com', 'confirmed');
   
   // REPLACE THESE WITH YOUR ACTUAL VALUES FROM DEPLOYMENT
-  const MINT_ADDRESS = 'ABNk7vgrQqAVvmcy3GribSLRi7RWfEjmmMEQBnZWCMBs';
+  const MINT_ADDRESS = '3yHtQdhbuuA6xhfUZ5qXHnHH6PJQktpMPAMfLxC6HZPJ';
 
   const senderKeypairPath = path.join(process.env.HOME || '', '.config', 'solana', 'id.json');
   const SENDER_SECRET_KEY = JSON.parse(fs.readFileSync(senderKeypairPath, 'utf-8'));

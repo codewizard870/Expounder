@@ -6,6 +6,26 @@ A Solana program that enables receivers to create payment requests with PDA-base
 
 This program implements a privacy-preserving payment request system using Program Derived Addresses (PDAs) for escrow. The key innovation is that funds flow through an ephemeral escrow account, and the receiver's main wallet is never exposed during the payment process.
 
+### Deployed Program Address
+
+**Testnet:** `EKFkEussF5JC6yPEggdhG3ME3CRhrokYWxUQPckwksvo`
+
+### Build and Deploy
+
+```bash
+# Install dependencies
+yarn install
+
+# Build the program
+anchor build
+
+# Deploy to localnet
+anchor deploy
+
+# Run tests
+anchor test
+```
+
 ## How It Works
 
 ### 1. Create Payment Request
@@ -56,41 +76,6 @@ Transfers funds from payer to escrow PDA.
 
 ### `sweep_funds`
 Claims funds from escrow to receiver's wallet and closes accounts.
-
-## Usage
-
-### Build and Deploy
-
-```bash
-# Install dependencies
-yarn install
-
-# Build the program
-anchor build
-
-# Deploy to localnet
-anchor deploy
-
-# Run tests
-anchor test
-```
-
-### Client Example
-
-```typescript
-// See app/client.ts for complete example
-const requestId = new anchor.BN(Date.now());
-const amount = 0.1 * LAMPORTS_PER_SOL;
-
-// Create request
-await program.methods.createPayRequest(requestId, new anchor.BN(amount))...
-
-// Payer settles
-await program.methods.settlePayment()...
-
-// Receiver sweeps
-await program.methods.sweepFunds()...
-```
 
 ## Security Considerations
 
