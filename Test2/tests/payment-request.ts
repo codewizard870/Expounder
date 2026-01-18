@@ -35,7 +35,6 @@ describe("payment-request", () => {
     // Generate test keypairs
     receiver = anchor.web3.Keypair.generate();
     otherUser = anchor.web3.Keypair.generate();
-    console.log(payer.publicKey.toBase58(), receiver.publicKey.toBase58(), otherUser.publicKey.toBase58())
     // Transfer 1 SOL from payer to otherUser
     const transfer2receiverIx = SystemProgram.transfer({
       fromPubkey: payer.publicKey,

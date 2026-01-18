@@ -24,3 +24,4 @@ Each test project may have its own dependencies. Refer to the individual project
 
 - **Test1**: Basic transfer testing
 - **Test2**: Payment request program with Anchor framework
+- **Test3**: Zero-knowledge enhanced payment requests with maximum privacy
