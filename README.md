@@ -19,6 +19,7 @@ Each test project may have its own dependencies. Refer to the individual project
 
 - [Test1](./Test1/readme.txt)
 - [Test2](./Test2/README.md)
+- [Test3](./Test3/README.md)
 
 ## Projects
 
