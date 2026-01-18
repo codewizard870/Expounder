@@ -1,0 +1,35 @@
+[package]
+name = "zk-payment-request"
+version = "0.1.0"
+description = "A Solana program for zero-knowledge payment requests with enhanced privacy"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib", "lib"]
+name = "zk_payment_request"
+
+[features]
+no-entrypoint = []
+no-idl = []
+no-log-ix-name = []
+cpi = ["no-entrypoint"]
+default = []
+idl-build = ["anchor-lang/idl-build", "anchor-spl/idl-build"]
+
+[dependencies]
+anchor-lang = { version = "0.32.1", features = ["init-if-needed"] }
+anchor-spl = { version = "0.32.1" }
+
+# ZK Proof dependencies for maximum privacy
+ark-crypto-primitives = { version = "0.4", features = ["crh"] }
+ark-bls12-381 = "0.4"
+ark-ff = "0.4"
+bulletproofs = "4.0"
+curve25519-dalek = "4.0"
+merlin = "3.0"
+rand = "0.8"
+sha3 = "0.10"
+sha2 = "0.10"
+
+# For stealth addresses and additional cryptography
+hkdf = "0.12"
